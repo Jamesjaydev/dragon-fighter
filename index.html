@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dragon Fighter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="menu-text-container">
+            <div class="menu-text">
+                <h1 class="menu-header">Dragon Fighter</h1>
+                <p class="menu-sub-header">Think you have what it takes to defeat the mightiest dragon of the medieval world?</p>
+                <p class="menu-sub-header" id="bottom-header">Click play to test your luck.</p>
+            </div>
+            <a class="menu-btn">Play Now</a>
+        </div>
+        <div class="game-text-container">
+            <div class="game-text">
+                <h1 class="game-header">How To Play</h1>
+                <p class="game-sub-header">At the start of the game, the dragon is assigned a random amount of health.</p>
+                <p class="game-sub-header">Each weapon/spell is also assigned a random damage value each time the game is initialized. The only way to know how mich damage each weapon/spell deals is by clicking on it.</p>
+                <p class="game-sub-header">Your objective is to deal damage equal to the dragon's health. Otherwise you lose.</p>
+                <p class="game-sub-header">You're also able to choose which character you want to use and each characrer comes with a different arsenal of weapons/spells. Good luck!</p>
+            </div>
+            <div class="objects-container">
+                <div id="weapons-container">
+                    <div class="resizeable_weapon_img">
+                <img class="weapon" id="weapon1" src="">
+            </div>
+            <div class="resizeable_weapon_img">
+                <img class="weapon" id="weapon2" src="">
+            </div>
+            <div class="resizeable_weapon_img">
+                <img class="weapon" id="weapon3" src="">
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="character-container">
+        	<div class="custom-select">
+                    <select id="character-select" class="object-select" name="character" onchange="characterChange(this.value);">
+                        <option class="character" value="0">Choose A Character:</option>
+                        <option class="character" value="knight">Knight</option>
+                        <option class="character" value="soldier">Soldier</option>
+                        <option class="character" value="mage">Mage</option>
+                    </select>
+                </div>
+                <div class="resizeable_img">
+        	<img src="" class="responsive-img dragon-img" id="character-image">
+        </div>
+        </div>
+        <div class="dragon-container">
+        	<div id="dragon-health">
+        		<p id="total-health">Dragon Health: 0</p>
+        		<p id="yourScore">Your Score: 0</p>
+        		<p id="wins">Wins: 0</p>
+        		<p id="losses">Losses: 0</p>
+        	</div>
+            <div class="resizeable_img">
+                <img src="assets/characters/threeheadeddragon.png" class="responsive-img dragon-img">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

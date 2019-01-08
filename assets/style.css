@@ -1,0 +1,120 @@
+/* Menu */
+.game-text-container{
+	display: none;
+}
+.menu-container{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../assets/photos/dragonfighter2.jpg');
+	height: 100vh;
+	background-position: center;
+	background-repeat: none;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	color: white;
+	font-family: 'MedievalSharp', cursive;
+}
+.menu-text-container,.game-text-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.menu-header{
+	font-size: 5rem;
+}
+.menu-sub-header{
+	font-size: 2rem;
+	padding: 20px;
+	text-shadow: 1px 1px black;
+}
+#bottom-header{
+	margin-bottom: 20px;
+}
+.menu-header,.game-header{
+	text-shadow: 2px 2px black;
+}
+.menu-btn, #attack-btn{
+	padding: 14px 40px;
+	color: white;
+	background-image: linear-gradient(to right, red , yellow);
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.menu-btn:hover, .attack-btn:hover{
+	padding: 21px 60px;
+}
+
+/* Game */
+.game-text-container{
+	line-height: 1.5;
+}
+ .game-header{
+ 	font-size: 4rem;
+ }
+ .game-sub-header{
+ 	font-size: 1.2rem;
+ 	margin-bottom: 20px;
+ }
+ .objects-container{
+ 	display: flex;
+ 	justify-content: center;
+ }
+ .custom-select{
+ 	width: 160px;
+ 	padding: 40px;
+ }
+ .object-select{
+ 	width: 100%;
+ }
+ .responsive-img{
+	width:100%;
+	height:auto;
+}
+.dragon-container{
+	display: none;
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+}
+.character-container{
+	display: none;
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+}
+#weapons-container{
+	display: flex;
+}
+.weapon{
+	height: auto;
+	width: 100%;
+	transition: transform .2s;
+	cursor: pointer;
+}
+.weapon:hover{
+	-ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+.resizeable_img{
+	width: 22vw;
+}
+.resizeable_weapon_img{
+	width: 14vw;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px){
+	.menu-text-container, .game-text-container{
+		top: 45%;
+	}
+	.game-header{
+		font-size: 3rem;
+	}
+	.game-sub-header{
+		font-size: 1rem;
+	}
+}
